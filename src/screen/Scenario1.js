@@ -47,11 +47,6 @@ const setupScene = (canvasRef) => {
     world = new CANNON.World();
     world.gravity.set(0, -9.82, 0);
 
-    const debugRenderer = new CANNON.DebugRenderer(scene, world);
-
-    // Add the debug renderer to the scene
-    scene.add(debugRenderer);
-
     // Clear previous canvas
     canvasRef.current.innerHTML = "";
     canvasRef.current.appendChild(renderer.domElement);
